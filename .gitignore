@@ -1,0 +1,23 @@
+# Mac DS_Store Files
+*.DS_Store
+
+.cache/
+.env
+
+# Node Modules
+node_modules/
+
+# Build Files
+public/js/
+public/css/
+public/img/
+
+# NPM Debug Log
+npm-debug.log
+
+
+# Coverage report
+coverage/
+/build/
+/.vscode/
+package-lock.json
