@@ -9,8 +9,6 @@ const merge = require('webpack-merge');
 // webpack plugins
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
-// TODO: switch this to react
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 // config files
@@ -53,7 +51,7 @@ const configureBabelLoader = (browserList) => {
 const configureEntries = () => {
     let entries = {};
     for (const [key, value] of Object.entries(settings.entries)) {
-        entries[key] = path.resolve(__dirname, settings.paths.src.js + value);
+        entries[key] = path.resolve(__dirname, settings.paths.src.base + value);
     }
 
     return entries;
@@ -62,7 +60,7 @@ const configureEntries = () => {
 // Configure Font loader
 const configureFontLoader = () => {
     return {
-        test: /\.(ttf|eot|woff2?)$/i,
+        test: /\.(woff)$/i,
         use: [
             {
                 loader: 'file-loader',
@@ -86,14 +84,6 @@ const configureManifest = (fileName) => {
     };
 };
 
-// Configure Vue loader
-// TODO: switch this to react
-const configureVueLoader = () => {
-    return {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-    };
-};
 
 // The base webpack config
 const baseConfig = {
@@ -103,22 +93,13 @@ const baseConfig = {
         path: path.resolve(__dirname, settings.paths.dist.base),
         publicPath: settings.urls.publicPath()
     },
-    // TODO: switch this to react
-    resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js'
-        }
-    },
     module: {
         rules: [
-            configureFontLoader(),
-            configureVueLoader(),
+            configureFontLoader()
         ],
     },
     plugins: [
-        new WebpackNotifierPlugin({title: 'Webpack', excludeWarnings: true, alwaysNotify: true}),
-        // TODO: switch this to react
-        new VueLoaderPlugin(),
+        new WebpackNotifierPlugin({title: 'Webpack', excludeWarnings: true, alwaysNotify: true})
     ]
 };
 

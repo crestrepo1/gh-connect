@@ -9,9 +9,12 @@
 // Needed for redux-saga es6 generator support
 import '@babel/polyfill';
 
-// Import all the third party stuff
-import React from 'react';
-import ReactDOM from 'react-dom';
+// // Import all the third party stuff
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 
-// Import root app
-import App from '.App';
+// // Import root app
+// import App from '.App';
+
+
+console.log('hello world');

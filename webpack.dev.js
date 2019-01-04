@@ -23,7 +23,7 @@ const settings = require('./webpack.settings.js');
 const configureDevServer = (buildType) => {
     return {
         public: settings.devServerConfig.public(),
-        contentBase: path.resolve(__dirname, settings.paths.templates),
+        contentBase: path.resolve(__dirname, settings.paths.src.base),
         host: settings.devServerConfig.host(),
         port: settings.devServerConfig.port(),
         https: !!parseInt(settings.devServerConfig.https()),
@@ -42,7 +42,7 @@ const configureDevServer = (buildType) => {
         },
         // Use sane to monitor all of the templates files and sub-directories
         before: (app, server) => {
-            const watcher = sane(path.join(__dirname, settings.paths.templates), {
+            const watcher = sane(path.join(__dirname, settings.paths.src.base), {
                 glob: ['**/*'],
                 poll: !!parseInt(settings.devServerConfig.poll()),
             });
@@ -99,10 +99,6 @@ const configurePostcssLoader = (buildType) => {
             use: [
                 {
                     loader: 'style-loader',
-                },
-                // TODO: remove this/change to react style loader
-                {
-                    loader: 'vue-style-loader',
                 },
                 {
                     loader: 'css-loader',
