@@ -7,9 +7,11 @@ require('dotenv').config();
 // Webpack settings exports
 // noinspection WebpackConfigHighlighting
 module.exports = {
-    name: "Example Project",
+    name: "GH Connect",
+    //TODO: update this
     copyright: "Example Company, Inc.",
     paths: {
+        //TODO: update the urls to match our folder structure
         src: {
             base: "./src/",
             css: "./src/css/",
@@ -26,6 +28,7 @@ module.exports = {
         },
         templates: "./templates/"
     },
+    // TODO: update this
     urls: {
         live: "https://example.com/",
         local: "http://example.test/",
@@ -44,6 +47,7 @@ module.exports = {
             to: "js/[name].[ext]"
         }
     ],
+    //TODO: are we going to use this?
     criticalCssConfig: {
         base: "./web/dist/criticalcss/",
         suffix: "_critical.min.css",
