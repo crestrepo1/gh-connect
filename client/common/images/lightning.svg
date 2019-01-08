@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g  transform="translate(-239, -730)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1400" height="1151"></rect>
+            <g  transform="translate(230, 555)" stroke="#666666" stroke-linejoin="round">
+                <g  transform="translate(0, 166)">
+                    <g  transform="translate(10.2, 10.2)">
+                        <polygon stroke-width="1.8" points="19.8658854 9 25.7773438 9 20.9270833 16.4366804 27 16.4366804 14.2617188 29.7 18.3515625 20.1550207 13.5 20.1550207"></polygon>
+                        <path d="M19.8,36 L19.8,39.6" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M36,19.8 L39.6,19.8" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M19.8,3.6 L19.8,0" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M3.6,19.8 L0,19.8" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M8.34606,31.25574 L5.79906,33.80274" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M31.25574,31.25574 L33.80094,33.80094" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M31.25646,8.34606 L33.80166,5.80086" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M8.34516,8.34606 L5.79996,5.80086" stroke-width="1.8" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
