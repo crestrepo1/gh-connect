@@ -8,6 +8,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const TerserPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 // config files
 const baseConfig = require('./webpack.common.js');
@@ -79,7 +81,37 @@ const configureOptimization = (buildType) => {
         minimizer: [
             new TerserPlugin(
                 configureTerser()
-            )
+            ),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    }
+}
+
+const configureCss = () => {
+    return {
+        test: /\.css$/,
+        use: [{
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+
+                }
+            },
+            {
+                loader: 'css-loader',
+                options: {
+                    importLoaders: 1,
+                    localIdentName: '[name]__[local]',
+                    modules: true,
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    config: {
+                        path: './postcss.config.js'
+                    }
+                }
+            }
         ]
     }
 }
@@ -94,12 +126,20 @@ module.exports = merge(
             mode: 'production',
             devtool: 'source-map',
             optimization: configureOptimization(),
+            module: {
+                rules: [
+                    configureCss()
+                ],
+            },
             plugins: [
                 new CleanWebpackPlugin('build'),
                 new HtmlWebpackPlugin(configureHtml()),
                 new BundleAnalyzerPlugin(
                     configureBundleAnalyzer(),
                 ),
+                new MiniCssExtractPlugin({
+                    filename: "styles/styles.css"
+                }),
                 new webpack.optimize.AggressiveMergingPlugin(),
                 new webpack.BannerPlugin(
                     configureBanner()

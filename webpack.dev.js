@@ -10,6 +10,32 @@ const Dashboard = require('webpack-dashboard');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const dashboard = new Dashboard();
 
+const configureCss = () => {
+    return {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+            'style-loader',
+            {
+                loader: 'css-loader',
+                options: {
+                    importLoaders: 1,
+                    localIdentName: '[name]__[local]',
+                    modules: true
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    config: {
+                        path: './postcss.config.js'
+                    }
+                }
+            }
+        ]
+    }
+}
+
 // Production module exports
 module.exports = merge(
     baseConfig,
@@ -31,6 +57,11 @@ module.exports = merge(
             hot: true,
             quiet: true,
             stats: 'errors-only',
+        },
+        module: {
+            rules: [
+                configureCss()
+            ],
         },
         plugins: [
             new webpack.HotModuleReplacementPlugin(),

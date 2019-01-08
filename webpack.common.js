@@ -21,6 +21,9 @@ const configureBabelLoader = (browserList) => {
                     ],
                     "@babel/preset-react"
                 ],
+                plugins: [
+                    ["babel-plugin-root-import", { "rootPathSuffix": "client" }],
+                ]
             },
         },
     };
@@ -37,7 +40,8 @@ const baseConfig = {
     },
     module: {
         rules: [
-            configureBabelLoader(pkg.browserslist.legacyBrowsers)
+            configureBabelLoader(pkg.browserslist.legacyBrowsers),
+
         ]
     },
     plugins: [

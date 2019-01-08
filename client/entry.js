@@ -17,8 +17,6 @@ import App from './App';
 
 const MOUNT_NODE = document.getElementById('app');
 
-console.log('hello world');
-
 ReactDOM.render(
     <Provider>
         <App/>

@@ -1,14 +1,16 @@
 // Import Dependencies
 import React, { Component } from 'react';
+// Global css files
+import '~/common/styles/reset.css';
+import '~/common/styles/default.css';
 
 class App extends Component {
-
 
     render() {
         return (
             // insert router
             <div>
-                This is great
+                Hello World
             </div>
         );
     }
