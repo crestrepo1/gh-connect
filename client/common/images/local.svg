@@ -1,0 +1,18 @@
+<svg width="124px" height="82px" viewBox="0 0 124 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(0, -3)">
+            <ellipse fill="#ECF7ED" cx="62" cy="72" rx="62" ry="13"></ellipse>
+            <g stroke-width="1" transform="translate(28, 4)">
+                <g transform="translate(12.333333, 1)" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                    <g>
+                        <path d="M42.9166667,21.6666667 C42.9166667,33.408 21.6666667,65.5833333 21.6666667,65.5833333 C21.6666667,65.5833333 0.416666667,33.408 0.416666667,21.6666667 C0.416666667,9.931 9.92816667,0.416666667 21.6666667,0.416666667 C33.4023333,0.416666667 42.9166667,9.931 42.9166667,21.6666667 Z"></path>
+                        <circle cx="21.6666667" cy="21.6666667" r="8.5"></circle>
+                    </g>
+                </g>
+                <g>
+                    <rect x="0" y="0" width="68" height="68"></rect>
+                </g>
+            </g>
+        </g>    
+    </g>
+</svg>

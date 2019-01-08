@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/minutes plain</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="----Trial-Account/Verify/Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop:-Trial-Verify-Number-b" transform="translate(-238.000000, -609.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1400" height="1151"></rect>
+            <g id="Group-13" transform="translate(230.000000, 555.000000)" stroke="#666666" stroke-linecap="round" stroke-linejoin="round">
+                <g id="icons/call-plain" transform="translate(0.000000, 46.000000)">
+                    <g id="phone-call-2" transform="translate(8.428094, 8.428094)">
+                        <g id="Outline_Icons_1_" transform="translate(0.666838, 0.666838)" stroke-width="1.80602007">
+                            <g id="Outline_Icons">
+                                <g id="Group">
+                                    <path d="M12.8638642,17.4150347 C14.2725598,16.0045331 14.2725598,13.7163056 12.8638642,12.305804 L9.03148958,8.4752354 C7.62279393,7.06653975 5.33276048,7.06653975 3.92406483,8.4752354 L1.82185747,10.5774428 C-0.000416773862,12.397911 -0.282155904,15.2441986 1.13918189,17.3933625 C7.24352971,26.622125 15.3868742,34.7654695 24.6174428,40.8716234 C26.7629946,42.2893491 29.6165063,42.00761 31.4315565,40.1871418 L33.5355698,38.0849344 C34.9442655,36.6762387 34.9442655,34.3880113 33.5355698,32.9775096 L29.7031953,29.1469411 C28.2926936,27.7364394 26.0062722,27.7364394 24.5957705,29.1469411 L23.3189143,30.4237973 C19.1181117,26.981523 15.0274762,22.8926936 11.587008,18.6918909 L12.8638642,17.4150347 Z" id="Shape"></path>
+                                    <path d="M21.0054026,0.236171855 C32.4772421,0.236171855 41.7746334,9.53356316 41.7746334,21.0054026" id="Shape"></path>
+                                    <path d="M21.0054026,7.46025212 C28.4859377,7.46025212 34.5505531,13.5230615 34.5505531,21.0054026" id="Shape"></path>
+                                    <path d="M21.0054026,14.6843324 C24.4964394,14.6843324 27.3264729,17.5125598 27.3264729,21.0054026" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

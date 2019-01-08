@@ -1,0 +1,22 @@
+<svg width="124px" height="82px" viewBox="0 0 124 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(0, -6)">
+            <ellipse fill="#ECF7ED" cx="62" cy="72" rx="62" ry="13"></ellipse>
+            <g stroke-width="1" transform="translate(31, 7)">
+                <g transform="translate(1, 1)" stroke="#666666" stroke-linejoin="round" stroke-width="3">
+                    <g >
+                        <path d="M57.75,28.8925 C57.75,44.83 44.8425,57.7525 28.92,57.7525 C12.9975,57.75 0.25,44.3125 0.25,28.375 C0.25,12.855 12.425,0.895 27.7625,0.2775 C28.1775,0.26 28.5925,0.25 29.0125,0.25 C44.935,0.25 57.75,12.955 57.75,28.8925 Z"></path>
+                        <path d="M27.7625,0.2775 C12.7625,16.5275 12.7625,37.7275 27.7625,57.7275"></path>
+                        <path d="M30.2625,0.2775 C45.2625,16.5275 45.2625,37.72 30.2625,57.72"></path>
+                        <path d="M4.965,12.75 L52.8025,12.75"></path>
+                        <path d="M0.2575,27.75 L57.75,27.75"></path>
+                        <path d="M3.9625,42.75 L54.2125,42.75"></path>
+                    </g>
+                </g>
+                <g >
+                    <rect x="0" y="0" width="60" height="60"></rect>
+                </g>
+            </g>
+        </g> 
+    </g>
+</svg>
