@@ -20,9 +20,9 @@ const MOUNT_NODE = document.getElementById('app');
 console.log('hello world');
 
 ReactDOM.render(
-    <div>
+    <Provider>
         <App/>
-    </div>,
+    </Provider>,
     MOUNT_NODE,
 );
 

@@ -1,0 +1,46 @@
+:root {
+    --brandSecondaryColor: #8235B2;
+    --brandSecondaryMediumColor: #913EC5;
+    --fontColor: #666;
+}
+
+.content {
+    margin-top: 34px;
+}
+
+.content p {
+    color: var(--fontColor);
+    font-size: 18px;
+    letter-spacing: -0.0167em;
+    text-align: center;
+}
+
+.button {
+    align-items: center;
+    background-color: var(--brandSecondaryColor);
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    color: #FFF;
+    cursor: pointer;
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    height: 56px;
+    justify-content: center;
+    letter-spacing: -0.0318em;
+    margin: 64px auto 0;
+    margin-bottom: 16px;
+    text-decoration: none;
+    width: 280px;
+}
+
+.button:hover {
+    background-color: var(--brandSecondaryMediumColor);
+    text-decoration: none;
+}
+
+.button::after,
+.link--secondary::after {
+    content: ' \00BB';
+    white-space: pre;
+}

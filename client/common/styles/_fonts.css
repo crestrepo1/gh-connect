@@ -1,0 +1,47 @@
+/* Proxima Nova light */
+@font-face {
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/proximanovalight/proximanova-light-webfont.woff') format('woff');
+}
+
+/* Proxima Nova light italic */
+@font-face {
+    font-family: ProximaNova;
+    font-style: italic;
+    font-weight: 300;
+    src: url('../fonts/proximanovalightitalic/proximanova-lightit-webfont.woff') format('woff');
+}
+
+/* Proxima Nova regular */
+@font-face {
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/proximanovaregular/proximanova-reg-webfont.woff') format('woff');
+}
+
+/* Proxima Nova Italic */
+@font-face {
+    font-family: ProximaNova;
+    font-style: italic;
+    font-weight: normal;
+    src: url('../fonts/proximanovaregularitalic/proximanova-regularitalic-webfont.woff') format('woff');
+}
+
+/* Proxima Nova semibold */
+@font-face {
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/proximanovasemibold/proximanova-sbold-webfont.woff') format('woff');
+}
+
+/* Proxima Nova bold */
+@font-face {
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/proximanovabold/proximanova-bold-webfont.woff') format('woff');
+}
