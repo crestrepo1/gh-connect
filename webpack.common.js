@@ -29,6 +29,21 @@ const configureBabelLoader = (browserList) => {
     };
 };
 
+// Configure Font loader
+const configureFontLoader = () => {
+    return {
+        test: /\.(ttf|eot|woff2?)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name].[ext]'
+                }
+            }
+        ]
+    };
+};
+
 const baseConfig = {
     name: pkg.name,
     entry: {
@@ -37,6 +52,7 @@ const baseConfig = {
     module: {
         rules: [
             configureBabelLoader(pkg.browserslist.legacyBrowsers),
+            configureFontLoader(),
 
         ]
     },
