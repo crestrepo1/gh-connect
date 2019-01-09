@@ -34,10 +34,6 @@ const baseConfig = {
     entry: {
         index: './client/entry.js'
     },
-    output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: `js/bundle.[name].[hash].js`,
-    },
     module: {
         rules: [
             configureBabelLoader(pkg.browserslist.legacyBrowsers),

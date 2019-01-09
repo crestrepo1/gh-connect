@@ -9,6 +9,7 @@ const baseConfig = require('./webpack.common.js');
 const Dashboard = require('webpack-dashboard');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const dashboard = new Dashboard();
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const configureCss = () => {
     return {
@@ -36,26 +37,33 @@ const configureCss = () => {
     }
 }
 
+// Configure Html webpack
+const configureHtml = () => {
+    return {
+        template: './client/index.html',
+    };
+};
+
 // Production module exports
 module.exports = merge(
     baseConfig,
     {
         output: {
-            // has to match webpack dev server path i.e. localhost:8080
-            // required so that css loads url() and fonts in dev, removed for production
-            publicPath: 'http://localhost:8080/'
+            path: path.resolve(__dirname, 'client'),
+            filename: `bundle.js`,
         },
         mode: 'development',
         devtool: 'inline-source-map',
         devServer: {
-            // --content-base is which directory is being served
+            // // --content-base is which directory is being served
             contentBase: path.resolve(__dirname, 'client'),
+            inline: true,
             /* When using the HTML5 History API,
             the index.html page will likely have be served in place of any 404 */
             historyApiFallback: true,
             // open in browser at localhost:8080
             hot: true,
-            quiet: true,
+            // quiet: true,
             stats: 'errors-only',
         },
         module: {
@@ -65,6 +73,7 @@ module.exports = merge(
         },
         plugins: [
             new webpack.HotModuleReplacementPlugin(),
+            new HtmlWebpackPlugin(configureHtml()),
             new DashboardPlugin(dashboard.setData),
         ],
     }
