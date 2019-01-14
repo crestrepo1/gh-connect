@@ -16,11 +16,10 @@ import { Provider } from 'mobx-react';
 import App from './App';
 
 const MOUNT_NODE = document.getElementById('app');
-console.log('hello');
 
 ReactDOM.render(
     <Provider>
-        <App/>
+        <App />
     </Provider>,
     MOUNT_NODE,
 );

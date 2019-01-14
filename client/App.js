@@ -4,14 +4,21 @@ import React, { Component } from 'react';
 import '~/common/styles/reset.css';
 import '~/common/styles/default.css';
 
-class App extends Component {
+// import BrowserRouter
+import { BrowserRouter } from 'react-router-dom';
 
+import Header from '~/common/components/Header';
+
+class App extends Component {
     render() {
         return (
             // insert router
-            <div>
-                Hello World!!!!
-            </div>
+            <BrowserRouter>
+                <main>
+                    <Header />
+                    Hello World!!!!
+                </main>
+            </BrowserRouter>
         );
     }
 }

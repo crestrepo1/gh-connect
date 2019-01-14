@@ -1,23 +1,18 @@
 .header {
     background: #000;
-    height: 47px;
-    margin: -62px auto 0;
     padding: 10px 0 5px;
     width: 100%;
 }
 
-.header::after {
-    clear: both;
-    content: '';
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
+.logo {
+    height: 30px;
+    width: 152px;
 }
 
-.header aside {
-    float: right;
-    padding-top: 15px;
+.logo img {
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .tel,
@@ -33,10 +28,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .header {
-        margin-bottom: 0;
-    }
-
     .support {
         display: none;
     }

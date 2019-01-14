@@ -44,6 +44,35 @@ const configureHtml = () => {
     };
 };
 
+// Configure Image loader
+const configureImageLoader = (buildType) => {
+    return {
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[hash].[ext]'
+                }
+            }
+        ]
+    };
+};
+
+const configureDevServer = () => {
+    return {
+        // --content-base is which directory is being served
+        contentBase: path.resolve(__dirname, 'client'),
+        inline: true,
+        // When using the HTML5 History API,
+        // the index.html page will likely have be served in place of any 404
+        historyApiFallback: true,
+        hot: true,
+        quiet: true,
+        stats: 'errors-only',
+    }
+}
+
 // Production module exports
 module.exports = merge(
     baseConfig,
@@ -54,21 +83,11 @@ module.exports = merge(
         },
         mode: 'development',
         devtool: 'inline-source-map',
-        devServer: {
-            // // --content-base is which directory is being served
-            contentBase: path.resolve(__dirname, 'client'),
-            inline: true,
-            /* When using the HTML5 History API,
-            the index.html page will likely have be served in place of any 404 */
-            historyApiFallback: true,
-            // open in browser at localhost:8080
-            hot: true,
-            // quiet: true,
-            stats: 'errors-only',
-        },
+        devServer: configureDevServer(),
         module: {
             rules: [
-                configureCss()
+                configureCss(),
+                configureImageLoader(),
             ],
         },
         plugins: [
