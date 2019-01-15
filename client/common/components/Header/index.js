@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Centering from '~/common/components/Centering';
 
 // Import images
 import logo from '~/common/images/grasshopper_logo.png';
@@ -11,9 +10,10 @@ import styles from './header.css';
 const Header = () => {
     return (
         <header className={styles.header}>
-            <Centering>
-                <a className={styles.logo} href="http://grasshopper.com">
+            <section className={styles.header__wrapper}>
+                <a className={styles['logo-link']} href="http://grasshopper.com">
                     <img
+                        className={styles['logo-img']}
                         alt="Grasshopper"
                         src={logo}
                         title="Grasshopper"
@@ -31,7 +31,7 @@ const Header = () => {
                         (800) 279-1455
                     </Link>
                 </aside>
-            </Centering>
+            </section>
         </header>
     );
 };

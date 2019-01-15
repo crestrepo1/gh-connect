@@ -13,7 +13,7 @@ import Header from '~/common/components/Header';
 // Import route Components
 import Routes from '~/Routes.js';
 
-class App extends Component {
+export default class App extends Component {
 
 
     render() {
@@ -28,6 +28,3 @@ class App extends Component {
         );
     }
 }
-
-// this is imported in the entry.js file
-export default App;
