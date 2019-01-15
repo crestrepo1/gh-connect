@@ -6,9 +6,6 @@ const webpack = require('webpack');
 const baseConfig = require('./webpack.common.js');
 
 // webpack plugins
-const Dashboard = require('webpack-dashboard');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const dashboard = new Dashboard();
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const configureCss = () => {
@@ -119,7 +116,6 @@ module.exports = merge(
         plugins: [
             new webpack.HotModuleReplacementPlugin(),
             new HtmlWebpackPlugin(configureHtml()),
-            new DashboardPlugin(dashboard.setData),
         ],
     }
 )

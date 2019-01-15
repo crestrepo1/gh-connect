@@ -11,14 +11,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from '~/common/components/Header';
 
 class App extends Component {
-    componentDidMount() {
-        axios.post('/api/NumberlockSession/')
-            .then((response) => {
-                console.log(response);
-            }).catch((err) => {
-                return err;
-            });
-    }
+
 
     render() {
         return (
