@@ -10,6 +10,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Header from '~/common/components/Header';
 
+// Import route Components
+import Routes from '~/Routes.js';
+
 class App extends Component {
 
 
@@ -19,7 +22,7 @@ class App extends Component {
             <BrowserRouter>
                 <main>
                     <Header />
-                    Hello World!!!!
+                    <Routes />
                 </main>
             </BrowserRouter>
         );
