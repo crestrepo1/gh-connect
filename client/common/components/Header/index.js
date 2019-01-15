@@ -13,8 +13,8 @@ const Header = () => {
             <section className={styles.header__wrapper}>
                 <a className={styles['logo-link']} href="http://grasshopper.com">
                     <img
-                        className={styles['logo-img']}
                         alt="Grasshopper"
+                        className={styles['logo-img']}
                         src={logo}
                         title="Grasshopper"
                     />

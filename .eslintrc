@@ -2,7 +2,8 @@
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true,
-            "modules": true
+            "modules": true,
+            "legacyDecorators" : true
         }
     },
     "parser": "babel-eslint",

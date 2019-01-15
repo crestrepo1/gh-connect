@@ -4,10 +4,7 @@ import React, { Component } from 'react';
 // import styles from './numbers.css';
 
 export default class Plans extends Component {
-
-
     render() {
-
         return (
             <section>
                 local search view

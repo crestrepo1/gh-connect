@@ -33,7 +33,7 @@ import { numberLockSessionStore } from '~/common/stores/domain/numberLockSession
 // combine stores
 const stores = {
     // modalStore,
-    numberLockSessionStore,
+    numberLockSessionStore
     // promoCodeStore,
     // userLocationStore,
     // customTollFreeNumbersStore,

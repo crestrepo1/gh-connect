@@ -1,21 +1,21 @@
 .header {
     background: #000;
-    width: 100%;
     padding: 20px 0;
+    width: 100%;
 }
 
 .header__wrapper {
-    display: flex;
-    max-width: 960px;
-    margin: 0 auto;
-    justify-content: space-between;
     align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 960px;
 }
 
 .logo-link {
+    display: block;
     height: 30px;
     width: 152px;
-    display: block;
 }
 
 .logo-img {

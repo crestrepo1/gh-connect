@@ -22,11 +22,11 @@ import ConfirmNumberTransfer from '~/views/ConfirmNumberTransfer';
 // import ExpiredTrialBlocker from '~/views/ExpiredTrialBlocker';
 
 import {
-    PATH_PLANS, PATH_NUMBERS, PATH_LOCAL_RECOMMEND, PATH_LOCAL_SEARCH, PATH_TOLL_FREE, PATH_CUSTOM_TOLL_FREE, PATH_TRANSFER_CURRENT_NUMBER, PATH_CONFIRM_NUMBER_TRANSFER,
-    PATH_BILLING, PATH_PENDING,
-    PATH_TRIAL_NUMBERS, PATH_TRIAL_SIGNUP, PATH_TRIAL_SIGNUP_SUCCESS,
-    PATH_TRIAL_LOGIN, PATH_TRIAL_UPGRADE, PATH_TRIAL_BLOCKER,
-    PATH_EXPIRED_TRIAL_BLOCKER
+    PATH_PLANS, PATH_NUMBERS, PATH_LOCAL_RECOMMEND, PATH_LOCAL_SEARCH, PATH_TOLL_FREE, PATH_CUSTOM_TOLL_FREE, PATH_TRANSFER_CURRENT_NUMBER, PATH_CONFIRM_NUMBER_TRANSFER
+    // PATH_BILLING, PATH_PENDING,
+    // PATH_TRIAL_NUMBERS, PATH_TRIAL_SIGNUP, PATH_TRIAL_SIGNUP_SUCCESS,
+    // PATH_TRIAL_LOGIN, PATH_TRIAL_UPGRADE, PATH_TRIAL_BLOCKER,
+    // PATH_EXPIRED_TRIAL_BLOCKER
 } from '~/common/utils/consts.js';
 
 const Routes = () => (
@@ -61,14 +61,14 @@ const Routes = () => (
             path={PATH_TRANSFER_CURRENT_NUMBER}
         />
         <Route
-            path={PATH_CONFIRM_NUMBER_TRANSFER}
+            component={ConfirmNumberTransfer}
             // render={() => {
             //     if (transferNumberStore.transferNumberLength > 0) {
             //         return <ConfirmNumberTransfer />;
             //     }
             //     return <Redirect to={PATH_TRANSFER_CURRENT_NUMBER} />;
             // }}
-            component={ConfirmNumberTransfer}
+            path={PATH_CONFIRM_NUMBER_TRANSFER}
         />
         <Route
             component={Plans}

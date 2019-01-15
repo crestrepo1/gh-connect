@@ -15,15 +15,21 @@ import { Provider } from 'mobx-react';
 // import mobx stores
 import stores from '~/common/stores/stores.js';
 
+// import errorBoundary
+import ErrorBoundary from '~/common/HRC/ErrorBoundary';
+
 // Import root app
 import App from './App';
 
 const MOUNT_NODE = document.getElementById('app');
 
 ReactDOM.render(
-    <Provider {...stores}>
-        <App />
-    </Provider>,
+
+    <ErrorBoundary>
+        <Provider {...stores}>
+            <App />
+        </Provider>
+    </ErrorBoundary>,
     MOUNT_NODE,
 );
 

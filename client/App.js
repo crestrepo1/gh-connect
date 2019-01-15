@@ -1,6 +1,6 @@
 // Import Dependencies
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { inject, observer } from 'mobx-react';
 // Global css files
 import '~/common/styles/reset.css';
 import '~/common/styles/default.css';
@@ -13,17 +13,30 @@ import Header from '~/common/components/Header';
 // Import route Components
 import Routes from '~/Routes.js';
 
-export default class App extends Component {
-
-
+@inject('numberLockSessionStore')
+@observer
+export default class App extends React.Component {
     render() {
+        const { NLS } = this.props.numberLockSessionStore;
         return (
             // insert router
             <BrowserRouter>
+
+
                 <main>
                     <Header />
-                    <Routes />
+                    {NLS
+                        ?
+
+                        <Routes />
+                        :
+                        // loading spinner
+                        <div>
+                            loading
+                        </div>
+                    }
                 </main>
+
             </BrowserRouter>
         );
     }
