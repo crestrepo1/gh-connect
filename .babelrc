@@ -1,0 +1,27 @@
+{
+    "plugins": [
+        [
+            "babel-plugin-root-import",
+            {
+                "rootPathSuffix": "client"
+            }
+        ],
+        "@babel/plugin-transform-modules-commonjs"
+    ],
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "modules": false,
+                "useBuiltIns": "entry",
+                "targets": {
+                    "browsers": [
+                        "> 0.5%",
+                        "last 3 versions"
+                    ]
+                }
+            }
+        ],
+        "@babel/preset-react"
+    ]
+}

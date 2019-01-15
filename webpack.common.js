@@ -8,23 +8,6 @@ const configureBabelLoader = (browserList) => {
         exclude: /node_modules/,
         use: {
             loader: 'babel-loader',
-            options: {
-                presets: [
-                    [
-                        '@babel/preset-env', {
-                        modules: false,
-                        useBuiltIns: 'entry',
-                        targets: {
-                            browsers: browserList,
-                        },
-                    }
-                    ],
-                    "@babel/preset-react"
-                ],
-                plugins: [
-                    ["babel-plugin-root-import", { "rootPathSuffix": "client" }],
-                ]
-            },
         },
     };
 };
