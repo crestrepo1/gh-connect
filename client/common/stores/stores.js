@@ -1,21 +1,21 @@
 // domain stores
+import ConvertToPaidClass from '~/common/stores/domain/convertToPaid.js';
+import CustomTollFreeNumbersClass from '~/common/stores/domain/customTollFreeNumbers.js';
+import EmailCaptureClass from '~/common/stores/domain/emailCapture.js';
+import FlexFrameStoreClass from '~/common/stores/domain/flexFrame.js';
+import LocalNumbersClass from '~/common/stores/domain/localNumbers.js';
+import LockNumberClass from '~/common/stores/domain/lockNumber.js';
 import NumberLockSessionClass from '~/common/stores/domain/numberLockSession.js';
-import PromoCodeClass from '~/common/stores/domain/promoCode.js';
-// import { userLocationStore } from '~/common/stores/domain/userLocation.js';
-// import { lockNumberStore } from '~/common/stores/domain/lockNumber.js';
-// import { customTollFreeNumbersStore } from '~/common/stores/domain/customTollFreeNumbers.js';
-// import { localNumbersStore } from '~/common/stores/domain/localNumbers.js';
 import OfferSuiteClass from '~/common/stores/domain/offerSuite.js';
-// import { requestLocalNumberStore } from '~/common/stores/domain/requestLocalNumber.js';
-// import { requestSMSStore } from '~/common/stores/domain/requestSMS.js';
-// import { tollFreeNumbersStore } from '~/common/stores/domain/tollFreeNumbers.js';
-// import { pendingStore } from '~/common/stores/domain/pending.js';
-// import { suggestedCitiesStore } from '~/common/stores/domain/suggestedCities.js';
-// import { emailCaptureStore } from '~/common/stores/domain/emailCapture.js';
-// import { flexFrameStore } from '~/common/stores/domain/flexFrame.js';
-// import { trialSignupStore } from '~/common/stores/domain/trialSignup.js';
-// import { convertToPaidStore } from '~/common/stores/domain/convertToPaid.js';
-// import { transferNumberStore } from '~/common/stores/domain/transferNumber.js';
+import PendingClass from '~/common/stores/domain/pending.js';
+import PromoCodeClass from '~/common/stores/domain/promoCode.js';
+import RequestLocalNumberClass from '~/common/stores/domain/requestLocalNumber.js';
+import RequestSMSClass from '~/common/stores/domain/requestSMS.js';
+import SuggestedCitiesClass from '~/common/stores/domain/suggestedCities.js';
+import TollFreeNumbersClass from '~/common/stores/domain/tollFreeNumbers.js';
+import TransferNumberClass from '~/common/stores/domain/transferNumber.js';
+import TrialSignupClass from '~/common/stores/domain/trialSignup.js';
+import UserLocationClass from '~/common/stores/domain/userLocation.js';
 
 // // ui stores
 // import { modalStore } from '~/common/stores/ui/modal.js';
@@ -33,9 +33,23 @@ import OfferSuiteClass from '~/common/stores/domain/offerSuite.js';
 // created root store
 export default class RootStore {
     constructor() {
+        this.convertToPaidStore = new ConvertToPaidClass(this);
+        this.customTollFreeNumbersStore = new CustomTollFreeNumbersClass(this);
+        this.emailCaptureStore = new EmailCaptureClass();
+        this.flexFrameStore = new FlexFrameStoreClass();
+        this.localNumbersStore = new LocalNumbersClass(this);
+        this.lockNumberStore = new LockNumberClass(this);
         this.numberLockSessionStore = new NumberLockSessionClass();
         this.offerSuiteStore = new OfferSuiteClass();
-        this.promoCodeStore = new PromoCodeClass(this)
+        this.pendingStore = new PendingClass();
+        this.promoCodeStore = new PromoCodeClass(this);
+        this.requestLocalNumberStore = new RequestLocalNumberClass();
+        this.requestSMSStore = new RequestSMSClass();
+        this.suggestedCitiesStore = new SuggestedCitiesClass();
+        this.tollFreeNumbersStore = new TollFreeNumbersClass(this);
+        this.transferNumberStore = new TransferNumberClass(this);
+        this.trialSignupStore = new TrialSignupClass();
+        this.userLocationStore = new UserLocationClass();
     }
 }
 

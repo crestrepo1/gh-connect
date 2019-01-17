@@ -1,5 +1,4 @@
 import { action, observable, computed, reaction } from 'mobx';
-import { modalStore } from '~/common/stores/ui/modal.js';
 import axios from 'axios';
 
 import isPlainObject from 'lodash/isPlainObject';
@@ -33,7 +32,7 @@ export default class ConvertToPaidClass {
 
     @observable timeoutErrorStep = '';
 
-    bootstrapStore() {
+    constructor() {
         // react to auth token being set
         reaction(
             // when auth token changes
@@ -51,8 +50,8 @@ export default class ConvertToPaidClass {
                     this.setTrialNumberInfo({});
                     this.setInvalidAddress(false);
                     this.setOrderTotal({});
-
-                    if (modalStore.childComponentString === 'loginModal') modalStore.setModalOptions({ isModalOpen: true });
+                    // TODO: add modal store back
+                    // if (modalStore.childComponentString === 'loginModal') modalStore.setModalOptions({ isModalOpen: true });
                 }
             }
         );
@@ -212,7 +211,7 @@ export default class ConvertToPaidClass {
             // set converting to paid to true
             this.setIsUserConvertingToPaid(true);
             // close modal
-            if (modalStore.childComponentString === 'loginModal') modalStore.setModalOptions({ isModalOpen: false });
+            // if (modalStore.childComponentString === 'loginModal') modalStore.setModalOptions({ isModalOpen: false });
             // if no issues set user data
             this.setUserInfo({
                 ...data,
