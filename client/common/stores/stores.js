@@ -1,11 +1,11 @@
 // domain stores
-import { numberLockSessionStore } from '~/common/stores/domain/numberLockSession.js';
-// import { promoCodeStore } from '~/common/stores/domain/promoCode.js';
+import NumberLockSessionClass from '~/common/stores/domain/numberLockSession.js';
+import PromoCodeClass from '~/common/stores/domain/promoCode.js';
 // import { userLocationStore } from '~/common/stores/domain/userLocation.js';
 // import { lockNumberStore } from '~/common/stores/domain/lockNumber.js';
 // import { customTollFreeNumbersStore } from '~/common/stores/domain/customTollFreeNumbers.js';
 // import { localNumbersStore } from '~/common/stores/domain/localNumbers.js';
-// import { offerSuiteStore } from '~/common/stores/domain/offerSuite.js';
+import OfferSuiteClass from '~/common/stores/domain/offerSuite.js';
 // import { requestLocalNumberStore } from '~/common/stores/domain/requestLocalNumber.js';
 // import { requestSMSStore } from '~/common/stores/domain/requestSMS.js';
 // import { tollFreeNumbersStore } from '~/common/stores/domain/tollFreeNumbers.js';
@@ -30,37 +30,12 @@ import { numberLockSessionStore } from '~/common/stores/domain/numberLockSession
 // import { billingInfoStore } from '~/common/stores/ui/billingInfo.js';
 // import { responsiveStore } from '~/common/stores/ui/responsive.js';
 
-// combine stores
-const stores = {
-    // modalStore,
-    numberLockSessionStore
-    // promoCodeStore,
-    // userLocationStore,
-    // customTollFreeNumbersStore,
-    // localNumbersStore,
-    // offerSuiteStore,
-    // pendingStore,
-    // plansStore,
-    // requestLocalNumberStore,
-    // requestSMSStore,
-    // tollFreeNumbersStore,
-    // transferNumberStore,
-    // suggestedCitiesStore,
-    // tollFreeStore,
-    // lockNumberStore,
-    // progressStore,
-    // emailCaptureStore,
-    // testingStore,
-    // flexFrameStore,
-    // trialSignupStore,
-    // formsStore,
-    // sharedFormUtilsStore,
-    // convertToPaidStore,
-    // accountInfoStore,
-    // billingInfoStore,
-    // directPurchaseStore,
-    // responsiveStore
-};
+// created root store
+export default class RootStore {
+    constructor() {
+        this.numberLockSessionStore = new NumberLockSessionClass();
+        this.offerSuiteStore = new OfferSuiteClass();
+        this.promoCodeStore = new PromoCodeClass(this)
+    }
+}
 
-// export stores to use with provider
-export default stores;

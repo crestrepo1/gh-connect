@@ -1,0 +1,112 @@
+.wrapper {
+    margin-top: 16px;
+}
+
+.select-wrapper {
+    background: #FFF;
+    border: solid 1px #AAA;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper::after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #AAA;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+}
+
+.select-label {
+    color: #AAA;
+    font-size: 13px;
+    left: 16px;
+    letter-spacing: -0.0333em;
+    line-height: 1;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    z-index: 1;
+}
+
+.focused {
+    border: solid 2px #3E94CB;
+    outline: none;
+}
+
+.focused::after {
+    border-top: 5px solid #3E94CB;
+}
+
+.select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: #AAA;
+    font-size: 18px;
+    outline: none;
+    padding: 16px 17px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Hack for chromes aoutofill background hiding the label */
+.select:-webkit-autofill,
+.select:-webkit-autofill:hover,
+.select:-webkit-autofill:focus {
+    -webkit-transition: background 99999s;
+}
+
+.selected .select {
+    color: #000;
+    padding: 27px 16px 7px;
+}
+
+.selected .select-label {
+    opacity: 1;
+}
+
+.selectedError {
+    color: #E60502;
+}
+
+.disabled {
+    background-color: #F6F6F6;
+}
+
+.focused-input {
+    color: #3E94CB;
+}
+
+.error {
+    border: solid 2px #E60502;
+}
+
+.select.error::placeholder {
+    color: #E60502;
+}
+
+.error-message {
+    color: #E60502;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.0083em;
+    margin-top: 8px;
+}
+
+.hint {
+    color: #AAA;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.0083em;
+    margin-top: 8px;
+}

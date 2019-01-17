@@ -1,0 +1,62 @@
+.input {
+    border: solid 1px #AAA;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 1;
+    padding: 27px 16px 7px;
+    width: 100%;
+    z-index: 2;
+}
+
+.input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.input[type='number']::-webkit-inner-spin-button,
+.input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hack for chromes aoutofill background hiding the label */
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+    -webkit-transition: background 99999s;
+}
+
+.input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.input:-moz-placeholder {
+    color: transparent;
+}
+
+.input::-moz-placeholder {
+    color: transparent;
+}
+
+.input:-ms-input-placeholder {
+    color: transparent;
+}
+
+.input:focus {
+    border: solid 2px #3E94CB;
+    outline: none;
+}
+
+.input.error {
+    border: solid 2px #E60502;
+}
+
+.input.warning {
+    border: solid 2px #FF8E00;
+}
+
+.input:disabled {
+    background-color: #F6F6F6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+

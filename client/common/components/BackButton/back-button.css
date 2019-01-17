@@ -1,0 +1,28 @@
+.wrapper {
+    color: #3E94CB;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    left: 0;
+    letter-spacing: 0.0143em;
+    padding: 0 18px 18px 0;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    top: 0;
+}
+
+.wrapper:hover {
+    text-decoration: underline;
+}
+
+.wrapper::before {
+    content: '\00AB ';
+}
+
+@media screen and (max-width: 1023px) {
+    .wrapper {
+        font-size: 12px;
+        left: 20px;
+    }
+}

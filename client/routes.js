@@ -29,53 +29,58 @@ import {
     // PATH_EXPIRED_TRIAL_BLOCKER
 } from '~/common/utils/consts.js';
 
-const Routes = () => (
-    <Switch> {/* Switch, Renders first <Route> or <Redirect> that matches the location. */}
-        <Route
-            component={Numbers}
-            exact
-            path={PATH_NUMBERS}
-        />
-        {/* Vanity number views*/}
-        <Route
-            component={TollFree}
-            path={PATH_TOLL_FREE}
-        />
-        <Route
-            component={CustomTollFree}
-            path={PATH_CUSTOM_TOLL_FREE}
-        />
-        {/* Local number views*/}
-        <Route
-            component={LocalRecommend}
-            path={PATH_LOCAL_RECOMMEND}
-        />
-        <Route
-            component={LocalSearch}
-            path={PATH_LOCAL_SEARCH}
-        />
-        {/* Transfer number views*/}
-        />
-        <Route
-            component={TransferCurrentNumber}
-            path={PATH_TRANSFER_CURRENT_NUMBER}
-        />
-        <Route
-            component={ConfirmNumberTransfer}
-            // render={() => {
-            //     if (transferNumberStore.transferNumberLength > 0) {
-            //         return <ConfirmNumberTransfer />;
-            //     }
-            //     return <Redirect to={PATH_TRANSFER_CURRENT_NUMBER} />;
-            // }}
-            path={PATH_CONFIRM_NUMBER_TRANSFER}
-        />
-        <Route
-            component={Plans}
-            path={PATH_PLANS}
-        />
-        <Redirect to={{ pathname: PATH_NUMBERS, search: location.search }} />
-    </Switch>
-);
+const Routes = () => {
+
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+
+    return (
+        <Switch> {/* Switch, Renders first <Route> or <Redirect> that matches the location. */}
+            <Route
+                component={Numbers}
+                exact
+                path={PATH_NUMBERS}
+            />
+            {/* Vanity number views*/}
+            <Route
+                component={TollFree}
+                path={PATH_TOLL_FREE}
+            />
+            <Route
+                component={CustomTollFree}
+                path={PATH_CUSTOM_TOLL_FREE}
+            />
+            {/* Local number views*/}
+            <Route
+                component={LocalRecommend}
+                path={PATH_LOCAL_RECOMMEND}
+            />
+            <Route
+                component={LocalSearch}
+                path={PATH_LOCAL_SEARCH}
+            />
+            {/* Transfer number views*/}
+            />
+            <Route
+                component={TransferCurrentNumber}
+                path={PATH_TRANSFER_CURRENT_NUMBER}
+            />
+            <Route
+                component={ConfirmNumberTransfer}
+                // render={() => {
+                //     if (transferNumberStore.transferNumberLength > 0) {
+                //         return <ConfirmNumberTransfer />;
+                //     }
+                //     return <Redirect to={PATH_TRANSFER_CURRENT_NUMBER} />;
+                // }}
+                path={PATH_CONFIRM_NUMBER_TRANSFER}
+            />
+            <Route
+                component={Plans}
+                path={PATH_PLANS}
+            />
+            <Redirect to={{ pathname: PATH_NUMBERS, search: location.search }} />
+        </Switch>
+    )
+};
 
 export default Routes;

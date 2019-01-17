@@ -65,7 +65,6 @@ const configureDevServer = () => {
         // the index.html page will likely have be served in place of any 404
         historyApiFallback: true,
         hot: true,
-        quiet: true,
         stats: 'errors-only',
         proxy: [
             {

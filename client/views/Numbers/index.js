@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 import { observer, inject } from 'mobx-react';
 
-@inject('numberLockSessionStore')
+@inject()
 @observer
 export default class Numbers extends Component {
     componentWillMount() {

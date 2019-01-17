@@ -1,4 +1,4 @@
-// import UrlParam from '~/common/utils/urlParam.js';
+import UrlParam from '~/common/utils/urlParam.js';
 
 // offer suite plans consts
 export const PLAN_TERM_MONTHLY = 'monthly';
@@ -48,10 +48,18 @@ export const PROMO_COUPON_TRIAL_EXPIRED = 'try75recycled';
 export const PROMO_MAX_AMOUNT_ALLOWED = 75;
 export const PROMO_MAX_AMOUNT_ALLOWED_MONTHLY = 30;
 
+// user flows
+export const FLOW_DIRECT_PURCHASE = 'direct purchase';
+export const FLOW_TRIAL_SIGNUP = 'trial signup';
+export const FLOW_TRIAL_CONVERTION = 'convert to paid';
+
 // flow step consts
 export const FLOW_STEP_PLANS = 'plans';
 export const FLOW_STEP_NUMBERS = 'numbers';
 export const FLOW_STEP_BILLING = 'billing';
+export const FLOW_STEP_ACCOUNT = 'account';
+export const FLOW_STEP_WELCOME = 'welcome';
+export const FLOW_STEP_VERIFICATION = 'verification';
 
 // path consts
 // general paths

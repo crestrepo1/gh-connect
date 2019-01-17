@@ -1,0 +1,61 @@
+.wrapper {
+    margin-top: 16px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.label {
+    color: #AAA;
+    font-size: 18px;
+    left: 0;
+    letter-spacing: -0.0333em;
+    line-height: 1;
+    padding: 20px 5px 20px 16px;
+    position: absolute;
+    top: 0;
+    transform-origin: 19px -15px;
+    transition: all 0.2s;
+    z-index: 1;
+}
+
+input:focus + .label,
+.min {
+    transform: scale(0.7);
+}
+
+input:focus + .label {
+    color: #3E94CB;
+}
+
+.error-message {
+    color: #E60502;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.0083em;
+    margin-top: 8px;
+}
+
+.error {
+    color: #E60502;
+}
+
+.hint {
+    color: #AAA;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.0083em;
+    margin-top: 8px;
+}
+
+.warning {
+    color: #FF8E00;
+}
+
+.warning-message {
+    color: #FF8E00;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.0083em;
+    margin-top: 8px;
+}

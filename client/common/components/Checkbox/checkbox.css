@@ -1,0 +1,30 @@
+.wrapper {
+    align-items: center;
+    border: 1px solid #BBB;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    width: 20px;
+}
+
+.wrapper:focus,
+.wrapper:hover {
+    border-color: #999;
+}
+
+.wrapper::after {
+    background-size: 14px;
+    height: 14px;
+    width: 14px;
+}
+
+.wrapper--checked::after {
+    /* stylelint-disable-next-line string-quotes */
+    background-image: url("data:image/svg+xml,%3csvg width='14' height='12' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.3295.4685c.6-.6144 1.5844-.626 2.1987-.026.6143.6.626 1.5843.026 2.1986L4.6679 11.74.4657 7.616C-.147 7.0144-.1563 6.03.4451 5.4171c.6015-.6128 1.5859-.622 2.1987-.0206l1.9774 1.9407L11.3295.4685z' fill='%23CCC'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    margin-bottom: -1px; /* icon is a little too high up */
+}

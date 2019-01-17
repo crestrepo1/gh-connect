@@ -9,6 +9,7 @@ import '~/common/styles/default.css';
 import { BrowserRouter } from 'react-router-dom';
 
 import Header from '~/common/components/Header';
+import CouponBanner from '~/common/components/CouponBanner';
 
 // Import route Components
 import Routes from '~/Routes.js';
@@ -25,6 +26,7 @@ export default class App extends React.Component {
 
                 <main>
                     <Header />
+                    <CouponBanner />
                     {NLS
                         ?
 

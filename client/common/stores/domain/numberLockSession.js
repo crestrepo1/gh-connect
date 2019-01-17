@@ -2,22 +2,20 @@ import { action, observable } from 'mobx';
 import axios from 'axios';
 
 // get url params
-// import { ghNls } from '~/common/globals.js';
+import { ghNls } from '~/common/globals.js';
 
-// import { modalStore } from '~/common/stores/ui/modal.js';
-
-class NumberLockSessionClass {
+export default class NumberLockSessionClass {
     @observable NLS;
     @observable NLSerror = false;
 
     constructor() {
         // get NLS from query string
-        // const nls = ghNls();
+        const nls = ghNls();
         // if there is a NLS in the query string
-        // if (nls) {
-        //     // set it as our NLS
-        //     return this.setNumberLockSessionId(nls);
-        // }
+        if (nls) {
+            // set it as our NLS
+            return this.setNumberLockSessionId(nls);
+        }
         // otherwise get a  new number lock session ID
         return this.getNumberLockSession();
     }
@@ -32,15 +30,8 @@ class NumberLockSessionClass {
                 // set NLS with response data
                 return this.setNumberLockSessionId(response.data.SessionId);
             }).catch((err) => {
+                //TODO: HANDLE THIS ERROR
                 this.setNLSError(true);
-                // open fatal error modal
-                // modalStore.setModalOptions({
-                //     isModalOpen: true,
-                //     isModalClosable: false,
-                //     modalType: 'medium',
-                //     childComponentString: 'fatalErrorModal'
-                // });
-                // catch errors from sources other than API
                 return err;
             });
     }
@@ -62,6 +53,3 @@ class NumberLockSessionClass {
         }
     }
 }
-
-const numberLockSessionStore = new NumberLockSessionClass();
-export { numberLockSessionStore, NumberLockSessionClass };

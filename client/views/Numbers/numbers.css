@@ -1,0 +1,174 @@
+:root {
+    --lightFontColor: #AAA;
+    --brandDefaultAccents: #CCC;
+    --brandPrimaryColor: #62B247;
+}
+
+.numbers {
+    text-align: center;
+    width: 100%;
+}
+
+.numbers br {
+    display: none;
+}
+
+.selected-number {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.disclaimer {
+    color: var(--lightFontColor);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px auto 60px;
+}
+
+.continue-button {
+    align-items: center;
+    background: var(--brandPrimaryColor);
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    color: #FFF;
+    cursor: pointer;
+    display: flex;
+    font-size: 22px;
+    font-weight: 700;
+    height: 80px;
+    justify-content: center;
+    letter-spacing: -0.0318em;
+    margin: 0 auto;
+    outline: none;
+    text-decoration: none;
+    transition: 0.1s all ease;
+    width: 305px;
+}
+
+.continue-button__margin-top {
+    margin-top: 110px;
+}
+
+.continue-button:focus,
+.continue-button:hover {
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.change-number {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--brandPrimaryColor);
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.change-number::after {
+    content: ' \00BB';
+    white-space: pre;
+}
+
+.change-number:hover {
+    text-decoration: underline;
+}
+
+.port {
+    align-items: center;
+    border: 1px solid var(--brandDefaultAccents);
+    border-radius: 2px;
+    display: flex;
+    height: 141px;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: left;
+    text-decoration: none;
+    width: 633px;
+}
+
+.port:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.24), 0 7px 6px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    margin-top: 17px;
+    transition: all 0.2s ease-in-out;
+}
+
+.port-icon {
+    margin-right: 26px;
+}
+
+.port-wrapper {
+    display: inline-block;
+    width: 413px;
+}
+
+.port-header {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.port-text {
+    color: #666;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.port-link {
+    color: var(--brandPrimaryColor);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.port-link:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+    .numbers br {
+        display: inline;
+    }
+
+    .continue-button {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .port {
+        display: flex;
+        height: auto;
+        margin: 10px auto;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .port-overlay:hover {
+        margin-top: 10px;
+    }
+
+    .port-wrapper {
+        display: block;
+        margin-bottom: 28px;
+        width: auto;
+    }
+
+    .port-icon {
+        left: 50%;
+        position: absolute;
+        top: 83px;
+        transform: translateX(-50%);
+    }
+
+    .port-header {
+        font-size: 20px;
+        margin-bottom: 138px;
+        margin-top: 20px;
+    }
+
+    .port-text {
+        padding: 0 20px;
+    }
+}
