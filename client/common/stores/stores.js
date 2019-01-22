@@ -17,18 +17,18 @@ import TransferNumberClass from '~/common/stores/domain/transferNumber.js';
 import TrialSignupClass from '~/common/stores/domain/trialSignup.js';
 import UserLocationClass from '~/common/stores/domain/userLocation.js';
 
-// // ui stores
-// import { modalStore } from '~/common/stores/ui/modal.js';
-// import { directPurchaseStore } from '~/common/stores/ui/directPurchase.js';
-// import { plansStore } from '~/common/stores/ui/plans.js';
-// import { tollFreeStore } from '~/common/stores/ui/tollFree.js';
-// import { progressStore } from '~/common/stores/ui/progress.js';
-// import { testingStore } from '~/common/stores/ui/testing.js';
-// import { formsStore } from '~/common/stores/ui/forms.js';
-// import { sharedFormUtilsStore } from '~/common/stores/ui/sharedFormUtils.js';
-// import { accountInfoStore } from '~/common/stores/ui/accountInfo.js';
-// import { billingInfoStore } from '~/common/stores/ui/billingInfo.js';
-// import { responsiveStore } from '~/common/stores/ui/responsive.js';
+// ui stores
+import AccountInfoClass from '~/common/stores/ui/accountInfo.js';
+import BillingInfoClass from '~/common/stores/ui/billingInfo.js';
+import DirectPurchaseClass from '~/common/stores/ui/directPurchase.js';
+import FormsClass from '~/common/stores/ui/forms.js';
+import ModalClass from '~/common/stores/ui/modal.js';
+import PlansClass from '~/common/stores/ui/plans.js';
+import ProgressClass from '~/common/stores/ui/progress.js';
+import ResponsiveClass from '~/common/stores/ui/responsive.js';
+import SharedFormUtilsClass from '~/common/stores/ui/sharedFormUtils.js';
+import TestingClass from '~/common/stores/ui/testing.js';
+import TollFreeClass from '~/common/stores/ui/tollFree.js';
 
 // created root store
 export default class RootStore {
@@ -50,6 +50,17 @@ export default class RootStore {
         this.transferNumberStore = new TransferNumberClass(this);
         this.trialSignupStore = new TrialSignupClass();
         this.userLocationStore = new UserLocationClass();
+        this.accountInfoStore = new AccountInfoClass();
+        this.billingInfoStore = new BillingInfoClass();
+        this.directPurchaseStore = new DirectPurchaseClass();
+        this.formsStore = new FormsClass();
+        this.modalStore = new ModalClass();
+        this.plansStore = new PlansClass();
+        this.progressStore = new ProgressClass();
+        this.responsiveStore = new ResponsiveClass();
+        this.sharedFormUtilsStore = new SharedFormUtilsClass();
+        this.testingStore = new TestingClass();
+        this.tollFreeStore = new TollFreeClass();
     }
 }
 

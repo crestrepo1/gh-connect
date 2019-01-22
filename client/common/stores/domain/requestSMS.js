@@ -1,5 +1,6 @@
 import { action, observable } from 'mobx';
 
+//TODO: IS THIS NEEDED ANYMORE?
 export default class RequestSMSClass {
     // request SMS
     @observable requestSMS = true;
