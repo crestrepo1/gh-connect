@@ -13,7 +13,7 @@ import { Provider } from 'mobx-react';
 // import strict mode for mobx
 
 // import mobx stores
-import RootStore from '~/common/stores/stores.js';
+import stores from '~/common/stores/stores.js';
 
 // import errorBoundary
 import ErrorBoundary from '~/common/HOC/ErrorBoundary/index.js';
@@ -22,8 +22,6 @@ import ErrorBoundary from '~/common/HOC/ErrorBoundary/index.js';
 import App from './App';
 
 const MOUNT_NODE = document.getElementById('app');
-
-const stores = new RootStore();
 
 ReactDOM.render(
 

@@ -1,0 +1,62 @@
+
+.linkbox {
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    text-decoration: none;
+    top: 0;
+    width: 305px;
+}
+
+.linkbox:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.24), 0 7px 6px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    top: -3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.linkbox h1 {
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 20px 0 30px;
+    text-align: center;
+}
+
+.linkbox figure {
+    margin: 20px 0 23px;
+    text-align: center;
+}
+
+.linkbox figure img {
+    height: 73px;
+}
+
+.linkbox p {
+    color: #666;
+    font-size: 18px;
+    letter-spacing: -0.021em;
+    margin: 20px 20px 28px;
+    text-align: center;
+}
+
+.linkbox section {
+    background: #62B247;
+    box-sizing: border-box;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .linkbox {
+        margin: 10px auto;
+        width: 100%;
+    }
+}

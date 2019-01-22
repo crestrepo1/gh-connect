@@ -31,7 +31,7 @@ import TestingClass from '~/common/stores/ui/testing.js';
 import TollFreeClass from '~/common/stores/ui/tollFree.js';
 
 // created root store
-export default class RootStore {
+class RootStore {
     constructor() {
         this.convertToPaidStore = new ConvertToPaidClass(this);
         this.customTollFreeNumbersStore = new CustomTollFreeNumbersClass(this);
@@ -64,3 +64,4 @@ export default class RootStore {
     }
 }
 
+export default new RootStore();

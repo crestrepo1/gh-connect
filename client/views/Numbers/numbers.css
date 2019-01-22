@@ -4,12 +4,13 @@
     --brandPrimaryColor: #62B247;
 }
 
-.numbers {
+.wrapper {
     text-align: center;
+    box-sizing: border-box;
     width: 100%;
 }
 
-.numbers br {
+.wrapper br {
     display: none;
 }
 
@@ -127,7 +128,11 @@
 }
 
 @media screen and (max-width: 767px) {
-    .numbers br {
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    .wrapper br {
         display: inline;
     }
 
